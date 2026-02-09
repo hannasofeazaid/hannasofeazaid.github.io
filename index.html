@@ -10,50 +10,52 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    
     <link rel="stylesheet" href="assets/css/style.css">
 
     <style>
-        /* --- ANIMATIONS & LAYOUT TWEAKS --- */
+        /* --- SMOOTH ANIMATIONS --- */
         html { scroll-behavior: smooth; }
 
-        @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(30px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
+        /* Initial state for scroll animation */
         .reveal {
             opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.8s ease-out;
+            transform: translateY(40px);
+            transition: all 0.9s ease-out;
         }
 
+        /* Active state when scrolled into view */
         .reveal.active {
             opacity: 1;
             transform: translateY(0);
         }
 
-        header { animation: fadeInUp 1s ease-out; }
-
+        /* Hover animation for cards */
         .project-card {
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+            cursor: pointer;
         }
 
         .project-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+            transform: translateY(-12px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+        }
+
+        header {
+            animation: fadeInDown 1.2s ease-out;
+        }
+
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
         }
 
         nav {
             position: sticky;
             top: 0;
             z-index: 1000;
-            background: #fff;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-
-        .btn-cv i, .btn-secondary i {
-            margin-right: 5px;
+            background: white;
+            padding: 10px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
         }
     </style>
 </head>
@@ -66,10 +68,9 @@
         <p><strong>Available for Internship: March 2026 – July 2026</strong></p>
 
         <div class="social-links">
-            <a href="https://www.linkedin.com/in/hanna-sofea-04424835b/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-            <a href="https://github.com/hannasofeazaid" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
-            
-            <a href="./assets/Hanna_Sofea_Binti_Mohd_Zaid_Resume.pdf" download class="btn-cv">
+            <a href="https://www.linkedin.com/in/hanna-sofea-04424835b/" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/hannasofeazaid" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="assets/Hanna_Resume.pdf" download class="btn-cv">
                 <i class="fas fa-file-arrow-down"></i> Download Resume
             </a>
         </div>
@@ -92,10 +93,10 @@
     <div class="container">
         <h2>About Me</h2>
         <div class="about-content">
-            <img src="assets/images/HANNA GAMBAR CONVO DIPLOMA.jpeg" alt="Hanna Sofea Mohd Zaid" class="profile-photo">
+            <img src="assets/images/HANNA GAMBAR CONVO DIPLOMA.jpeg" alt="Hanna" class="profile-photo">
             <div class="about-text">
-                <p>A motivated Statistics student from Universiti Teknologi MARA (UiTM), minoring in Big Data Analytics, with a CGPA of 3.68. Skilled in data collection, cleaning, analysis, and visualization using Excel, R, Python, and SPSS. Strong in data interpretation and presenting insights.</p>
-                <p>Currently seeking an internship to gain hands-on experience in data analysis and analytics projects, available from 30 March 2026 to 17 July 2026.</p>
+                <p>A motivated Statistics student from UiTM, minoring in Big Data Analytics (CGPA 3.68). Skilled in Excel, R, Python, and SPSS.</p>
+                <p>Seeking an internship from 30 March 2026 to 17 July 2026.</p>
             </div>
         </div>
     </div>
@@ -105,73 +106,53 @@
     <div class="container">
         <h2>My Projects</h2>
         <div class="projects-grid">
-
+            
             <div class="project-card">
-                <img src="assets/images/Diabetes2.webp" alt="Diabetes Dashboard Preview">
+                <img src="assets/images/Diabetes2.webp" alt="Diabetes">
                 <div class="project-card-content">
                     <h3>📊 Diabetes Analysis (USA Dataset)</h3>
-                    <p>Engineered an interactive Power BI dashboard to visualize clinical markers and demographic trends from 100,000 patient records.</p>
+                    <p>Power BI dashboard for 100,000 patient records.</p>
                     <div class="project-buttons">
-                        <a href="https://hannasofeazaid.github.io" target="_blank" class="btn">Documentation</a>
-                        <a href="https://app.powerbi.com/groups/me/reports/22ccd229-e388-4918-b1e0-793195fbfedd/e99410e2a05889206259?experience=power-bi" target="_blank" class="btn btn-secondary">View Dashboard</a>
+                        <a href="https://hannasofeazaid.github.io" class="btn">Documentation</a>
+                        <a href="https://app.powerbi.com/groups/me/reports/22ccd229-e388-4918-b1e0-793195fbfedd/e99410e2a05889206259" target="_blank" class="btn btn-secondary">Dashboard</a>
                     </div>
                 </div>
             </div>
 
             <div class="project-card">
-                <img src="assets/images/uniqlo_Logo.jpg" alt="Sentiment Analysis Preview">
+                <img src="assets/images/uniqlo_Logo.jpg" alt="Uniqlo">
                 <div class="project-card-content">
-                    <h3>🤖 Sentiment Analysis: Uniqlo Reviews</h3>
-                    <p>Built a classifier model using Altair AI Studio (RapidMiner) and Tableau to analyze customer reviews and automate sentiment detection.</p>
+                    <h3>🤖 Sentiment Analysis: Uniqlo</h3>
+                    <p>Classifier model using Altair AI Studio and Tableau.</p>
                     <div class="project-buttons">
-                        <a href="./assets/ISP610 PRESENTATION SLIDE.pdf" download class="btn"><i class="fas fa-file-arrow-down"></i> Slides</a>
-                        <a href="./assets/GROUP 3 SENTIMENT ANALYSIS USING UNIQLO REVIEWS.rmp" download class="btn btn-secondary">View Model</a>
+                        <a href="assets/ISP610 PRESENTATION SLIDE.pdf" download class="btn"><i class="fas fa-file-arrow-down"></i> Slides</a>
+                        <a href="assets/Uniqlo_Model.rmp" download class="btn btn-secondary">Model</a>
                     </div>
                 </div>
             </div>
 
             <div class="project-card">
-                <img src="assets/images/i-SACR_image_logo.PNG" alt="i-SACR Interface Preview">
+                <img src="assets/images/i-SACR_image_logo.PNG" alt="i-SACR">
                 <div class="project-card-content">
-                    <h3>📱 Interface Student Academic Resolver (i-SACR)</h3>
-                    <p>Designed a high-fidelity UI/UX prototype in Figma for a mobile application focused on student conflict resolution.</p>
+                    <h3>📱 Interface Student Academic Resolver</h3>
+                    <p>Figma UI/UX prototype for student conflict resolution.</p>
                     <div class="project-buttons">
-                        <a href="https://www.figma.com/proto/zQ8mYoiVppvVEeLgdr83LL/i-SACR?node-id=44-96" target="_blank" class="btn btn-secondary">View Prototype</a>
+                        <a href="https://www.figma.com/proto/zQ8mYoiVppvVEeLgdr83LL/i-SACR" target="_blank" class="btn btn-secondary">Prototype</a>
                     </div>
                 </div>
             </div>
 
             <div class="project-card">
-                <img src="assets/images/diabetes1.jfif" alt="FYP Predictive Model Preview">
+                <img src="assets/images/diabetes1.jfif" alt="FYP">
                 <div class="project-card-content">
-                    <h3>🧪 FYP: Predictive Model For Diabetes</h3>
-                    <p>Developed a Logistic Regression model to identify key health risk factors and predict future diabetes diagnosis probability.</p>
+                    <h3>🧪 FYP: Predictive Diabetes Model</h3>
+                    <p>Logistic Regression model to identify health risk factors.</p>
                     <div class="project-buttons">
-                        <a href="./assets/FYP DIABETES AD LATEST.R" download class="btn"><i class="fas fa-file-arrow-down"></i> R script</a>
+                        <a href="assets/FYP_Diabetes_Model.R" download class="btn"><i class="fas fa-file-arrow-down"></i> R script</a>
                     </div>
                 </div>
             </div>
 
-        </div>
-    </div>
-</section>
-
-<section id="skills" class="section reveal">
-    <div class="container">
-        <h2>Technical Skillset</h2>
-        <div class="skills-table">
-            <div class="skill-column">
-                <div class="skill-header"><i class="fas fa-chart-pie"></i><h3>Data Visualization</h3></div>
-                <ul class="skill-list"><li>Power BI</li><li>Tableau</li><li>AI Studio</li><li>Excel Dashboards</li></ul>
-            </div>
-            <div class="skill-column">
-                <div class="skill-header"><i class="fas fa-search-plus"></i><h3>Data Analysis</h3></div>
-                <ul class="skill-list"><li>SQL</li><li>Advanced Excel</li><li>Python (Pandas)</li><li>R Studio</li></ul>
-            </div>
-            <div class="skill-column">
-                <div class="skill-header"><i class="fas fa-cogs"></i><h3>Data Modeling</h3></div>
-                <ul class="skill-list"><li>Rapidminer</li><li>SAS Studio</li><li>Alteryx</li></ul>
-            </div>
         </div>
     </div>
 </section>
@@ -180,56 +161,41 @@
     <div class="container">
         <h2>Licenses & Certifications</h2>
         <div class="projects-grid">
-
+            
             <div class="project-card">
-                <img src="assets/images/Data Analyst Certificate.PNG" alt="Certification Preview">
+                <img src="assets/images/Data Analyst Certificate.PNG" alt="Data Analyst">
                 <div class="project-card-content">
-                    <h3>🏆 Datacamp Data Analytics Professional</h3>
-                    <p>Issued by Datacamp | Mastery of data cleaning, analysis, and visualization using Power BI and SQL.</p>
+                    <h3>🏆 Data Analyst Professional</h3>
                     <div class="project-buttons">
-                        <a href="https://www.datacamp.com/certificate/DAA0010112070000" target="_blank" class="btn btn-secondary">Verify</a>
-                        <a href="./assets/Hanna Sofea Mohd Zaid - Data Analyst Certificate.pdf" download class="btn btn-secondary"><i class="fas fa-file-arrow-down"></i> PDF</a>
+                        <a href="https://www.datacamp.com/certificate/DAA0010112070000" target="_blank" class="btn">Verify</a>
+                        <a href="assets/Hanna_Data_Analyst_Cert.pdf" download class="btn btn-secondary"><i class="fas fa-file-arrow-down"></i> PDF</a>
                     </div>
                 </div>
             </div>
 
             <div class="project-card">
-                <img src="assets/images/Data Scientist.PNG" alt="Certification Preview">
+                <img src="assets/images/Data Scientist.PNG" alt="Data Scientist">
                 <div class="project-card-content">
-                    <h3>🏆 Datacamp Data Scientist Professional</h3>
-                    <p>Issued by Datacamp | Mastery of data cleaning and analysis using Python and R Studio.</p>
+                    <h3>🏆 Data Scientist Professional</h3>
                     <div class="project-buttons">
-                        <a href="https://www.datacamp.com/certificate/DSA0015727329346" target="_blank" class="btn btn-secondary">Verify</a>
-                        <a href="./assets/Hanna Sofea Mohd Zaid - Data Scientist Certificate.pdf" download class="btn btn-secondary"><i class="fas fa-file-arrow-down"></i> PDF</a>
+                        <a href="https://www.datacamp.com/certificate/DSA0015727329346" target="_blank" class="btn">Verify</a>
+                        <a href="assets/Hanna_Data_Scientist_Cert.pdf" download class="btn btn-secondary"><i class="fas fa-file-arrow-down"></i> PDF</a>
                     </div>
                 </div>
             </div>
 
             <div class="project-card">
-                <img src="assets/images/Datacamp Alteryx.PNG" alt="DataCamp Preview">
+                <img src="assets/images/Datacamp Alteryx.PNG" alt="Alteryx">
                 <div class="project-card-content">
-                    <h3>📊 DataCamp: Alteryx Accomplishment</h3>
-                    <p>Verified skills in data preparation, analysis, and data cleaning using Alteryx.</p>
+                    <h3>📊 Alteryx Accomplishment</h3>
                     <div class="project-buttons">
-                        <a href="https://www.datacamp.com/completed/statement-of-accomplishment/course/b651066f500ea4a8544966fdcf2a1b7e7de258a1" target="_blank" class="btn btn-secondary">Verify</a>
-                        <a href="./assets/Hanna Sofea Mohd Zaid - Alteryx Certificate.pdf" download class="btn btn-secondary"><i class="fas fa-file-arrow-down"></i> PDF</a>
+                        <a href="https://www.datacamp.com/completed/statement-of-accomplishment/course/b651066f500ea4a8544966fdcf2a1b7e7de258a1" target="_blank" class="btn">Verify</a>
+                        <a href="assets/Hanna_Alteryx_Cert.pdf" download class="btn btn-secondary"><i class="fas fa-file-arrow-down"></i> PDF</a>
                     </div>
                 </div>
             </div>
 
         </div>
-    </div>
-</section>
-
-<section id="contact" class="section reveal">
-    <div class="container">
-        <h2>Send me a message</h2>
-        <form action="https://formsubmit.co/hannasofeazaid@gmail.com" method="POST" class="contact-form">
-            <div class="form-group"><label for="name">Name</label><input type="text" name="name" required></div>
-            <div class="form-group"><label for="email">Email</label><input type="email" name="email" required></div>
-            <div class="form-group"><label for="message">Message</label><textarea name="message" rows="5" required></textarea></div>
-            <button type="submit" class="btn">Send Message</button>
-        </form>
     </div>
 </section>
 
@@ -240,20 +206,24 @@
 </footer>
 
 <script>
-    // Scroll Reveal Script
-    function reveal() {
-        var reveals = document.querySelectorAll(".reveal");
-        for (var i = 0; i < reveals.length; i++) {
-            var windowHeight = window.innerHeight;
-            var elementTop = reveals[i].getBoundingClientRect().top;
-            var elementVisible = 100;
+    // Scroll Reveal Effect
+    const reveal = () => {
+        const reveals = document.querySelectorAll('.reveal');
+        reveals.forEach(el => {
+            const windowHeight = window.innerHeight;
+            const elementTop = el.getBoundingClientRect().top;
+            const elementVisible = 100;
             if (elementTop < windowHeight - elementVisible) {
-                reveals[i].classList.add("active");
+                el.classList.add('active');
             }
-        }
+        });
     }
-    window.addEventListener("scroll", reveal);
-    reveal(); // Run on load
+    window.addEventListener('scroll', reveal);
+    reveal(); // Initial check
+</script>
+
+</body>
+</html>
 </script>
 
 </body>
