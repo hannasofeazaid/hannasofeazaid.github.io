@@ -80,9 +80,38 @@ nav {
     transform: scale(1.05);
     box-shadow: 0 0 15px rgba(0,0,0,0.25);
 }
+/* Navigation styling */
+nav ul li a.active {
+    color: #2575fc;
+    border-bottom: 2px solid #2575fc;
+}
+
 
 </style>
 </head>
+<script>
+// Active nav link on scroll
+const sections = document.querySelectorAll('section');
+const navLinks = document.querySelectorAll('nav ul li a');
+
+window.addEventListener('scroll', () => {
+  let current = "";
+
+  sections.forEach(section => {
+    const sectionTop = section.offsetTop - 80;
+    if (pageYOffset >= sectionTop) {
+      current = section.getAttribute("id");
+    }
+  });
+
+  navLinks.forEach(link => {
+    link.classList.remove("active");
+    if (link.getAttribute("href") === "#" + current) {
+      link.classList.add("active");
+    }
+  });
+});
+</script>
 
 <body>
 
