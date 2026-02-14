@@ -16,57 +16,6 @@
             scroll-behavior: smooth;
         }
 
-        /* Intro section animation */
-        .intro {
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background: linear-gradient(-45deg, #1e3c72, #2a5298, #6a11cb, #2575fc);
-            background-size: 400% 400%;
-            animation: gradientMove 10s ease infinite;
-            color: white;
-            text-align: center;
-            position: relative;
-        }
-
-        .intro h1 {
-            font-size: 3rem;
-            opacity: 0;
-            animation: fadeIn 2s ease-in-out 1s forwards;
-        }
-
-        .intro p {
-            font-size: 1.5rem;
-            opacity: 0;
-            animation: fadeIn 2s ease-in-out 2s forwards;
-        }
-
-        .intro .scroll-down {
-            position: absolute;
-            bottom: 20px;
-            font-size: 2rem;
-            animation: bounce 2s infinite;
-        }
-
-        @keyframes fadeIn {
-            to {
-                opacity: 1;
-            }
-        }
-
-        @keyframes bounce {
-            0%, 20%, 50%, 80%, 100% {
-                transform: translateY(0);
-            }
-            40% {
-                transform: translateY(-10px);
-            }
-            60% {
-                transform: translateY(-5px);
-            }
-        }
-
         /* Scroll reveal animation */
         .reveal {
             opacity: 0;
@@ -101,18 +50,6 @@
         .project-card:hover {
             transform: translateY(-12px);
             box-shadow: 0 15px 30px rgba(0,0,0,0.2);
-        }
-
-        /* Skills used box */
-        .skills-used {
-            background: #f0f0f0;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            padding: 5px 10px;
-            margin-top: 10px;
-            font-size: 0.9rem;
-            color: #333;
-            display: inline-block;
         }
 
         /* Animated gradient header */
@@ -210,17 +147,6 @@
     });
 </script>
 <body>
-    <!-- INTRO -->
-    <section id="intro" class="intro">
-        <div>
-            <h1>Welcome to Hanna's Portfolio</h1>
-            <p>Explore my journey in data analysis and science</p>
-            <div class="scroll-down">
-                <i class="fas fa-chevron-down"></i>
-            </div>
-        </div>
-    </section>
-
     <!-- HEADER -->
     <header>
         <div class="container">
@@ -274,7 +200,6 @@
                     <div class="project-card-content">
                         <h3>📊 Diabetes Analysis (USA Dataset)</h3>
                         <p>Engineered an interactive Power BI dashboard and Microsoft Excel to visualize clinical markers and demographic trends from 100,000 patient records and also do data cleaning and preparation.</p>
-                        <div class="skills-used">Skills: Power BI, Excel, Data Cleaning, Visualization</div>
                         <div class="project-buttons">
                             <a href="https://app.powerbi.com/groups/me/reports/22ccd229-e388-4918-b1e0-793195fbfedd/e99410e2a05889206259?experience=power-bi" target="_blank" class="btn">View Dashboard</a>
                             <a href="DSC651 PRESENTATION SLIDE (GROUP 5).pdf" target="_blank" class="btn btn-secondary">Slides</a>
@@ -287,7 +212,6 @@
                     <div class="project-card-content">
                         <h3>🤖 Sentiment Analysis of Uniqlo Online Customer Reviews in Producing a Classifier Model</h3>
                         <p> Scraped customer review data using Python and developed a sentiment classification model using Altair AI Studio (RapidMiner), with Tableau used for visualization and analysis.</p>
-                        <div class="skills-used">Skills: Python, RapidMiner, Tableau, Data Scraping, Sentiment Analysis</div>
                         <div class="project-buttons">
                             <a href="ISP610 PRESENTATION SLIDE.pdf" download class="btn"><i class="fas fa-file-arrow-down"></i> Slides</a>
                             <a href="Uniqlo_Model.rmp" download class="btn btn-secondary">Model</a>
@@ -300,7 +224,6 @@
                     <div class="project-card-content">
                         <h3>📱 Interface Student Academic Resolver (i-SACR)</h3>
                         <p>Designed a high-fidelity UI/UX prototype in Figma for a mobile application focused on student conflict resolution and burnout management.</p>
-                        <div class="skills-used">Skills: Figma, UI/UX Design, Prototyping</div>
                         <div class="project-buttons">
                             <a href="https://www.figma.com/proto/zQ8mYoiVppvVEeLgdr83LL/i-SACR?node-id=44-96&p=f&t=n9qLctsF8KvIFPu9-0&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=26%3A7&show-proto-sidebar=1" target="_blank" class="btn btn-secondary">View Dashboard</a>
                             <a href="CS2416T2_INTERFACESTUDENTACADEMICRESOLVER(i-SACR)_slides.pdf" target="_blank" class="btn btn-secondary">Slides</a>
@@ -312,7 +235,6 @@
                     <div class="project-card-content">
                         <h3>🧪 Final Year Project: Predictive Model For Diabetes Using Logistic Regression</h3>
                         <p>Developed a Logistic Regression model to identify key health risk factors and predict future diabetes diagnosis probability.</p>
-                        <div class="skills-used">Skills: R, SAS Eminer, SPSS, Logistic Regression, Predictive Modeling</div>
                         <div class="project-buttons">
                             <a href="FYP_Diabetes_Model.R" download class="btn"><i class="fas fa-file-arrow-down"></i> R script</a>
                             <a href="https://hannasofeapresentationfypslides.my.canva.site/" target="_blank" class="btn btn-secondary">Slides</a>
@@ -324,7 +246,6 @@
                     <div class="project-card-content">
                         <h3>🚖 GRLGO: Women’s Smart Ride Service</h3>
                         <p> GRLGO is a women-only ride-hailing mobile application concept designed to enhance safety and comfort for female passengers by connecting them exclusively with verified female drivers. The user interface and app prototype were designed using Figma, supported by a clear business model and user-focused features.</p>
-                        <div class="skills-used">Skills: Figma, Business Planning, UI/UX Design</div>
                         <div class="project-buttons">
                             <a href="https://hannasofeapresentationfypslides.my.canva.site/copy-of-ent600" download class="btn"></i> Slides</a>
                             <a href="BP BARU ENT 600.pdf" download class="btn btn-secondary">BP Report</a>
@@ -429,4 +350,103 @@
                         </div>
                     </div>
                 </div>
-               
+                <div class="project-card">
+                    <img src="assets/images/Data Scientist.PNG" alt="Certification Preview">
+                    <div class="project-card-content">
+                        <h3>🏆 Datacamp Data Scientist Professional Certificate</h3>
+                        <p>Issued by Datacamp | Mastery of data cleaning, analysis, and visualization using Python and R Studio.</p>
+                        <div class="project-buttons">
+                            <a href="https://www.datacamp.com/certificate/DSA0015727329346" target="_blank" class="btn btn-secondary">View Certificate</a>
+                            <a href="Hanna_Data_Scientist_Cert.pdf" download class="btn btn-secondary">
+                                <i class="fas fa-file-arrow-down"></i> PDF
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="assets/images/Datacamp Alteryx.PNG" alt="DataCamp Preview">
+                    <div class="project-card-content">
+                        <h3>📊 DataCamp: Statement of Accomplishment for Alteryx</h3>
+                        <p>Verified skills in data preparation, analysis, and data cleaning sharing using Alteryx.</p>
+                        <div class="project-buttons">
+                            <a href="https://www.datacamp.com/completed/statement-of-accomplishment/course/b651066f500ea4a8544966fdcf2a1b7e7de258a1" target="_blank" class="btn btn-secondary">View Certificate</a>
+                            <a href="Hanna_Alteryx_Cert.pdf" download class="btn btn-secondary">
+                                <i class="fas fa-file-arrow-down"></i> PDF
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="assets/images/ANC image.jpeg" alt="Certification Preview">
+                    <div class="project-card-content">
+                        <h3>🏆 Vice Chancellor Award UiTM Diploma Certificate</h3>
+                        <p>Awarded by Universiti Teknologi MARA (UiTM) in recognition of outstanding academic performance and consistent excellence throughout the diploma programme.</p>
+                        <div class="project-buttons">
+                            <a href="VICE CHANCELLORS CERTIFICATE AWARD.pdf" download class="btn btn-secondary">
+                                <i class="fas fa-file-arrow-down"></i> PDF
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="assets/images/Complete Diploma.jpeg" alt="DataCamp Preview">
+                    <div class="project-card-content">
+                        <h3>📊 Completion of Diploma in Statistics</h3>
+                        <p>Completed with Vice Chancellor Award and a CGPA of 3.75.</p>
+                        <div class="project-buttons">
+                            <a href="COMPLETITION OF DIPLOMA STATISTICS.pdf" download class="btn btn-secondary">
+                                <i class="fas fa-file-arrow-down"></i> PDF
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="assets/images/Dekan Sem 3 image.jpeg" alt="Certification Preview">
+                    <div class="project-card-content">
+                        <h3>🏆 Dean’s List — Semester 3, Degree in Statistics</h3>
+                        <p>Recognized on the Dean’s List for excellent academic performance in Semester 3 of the Bachelor’s Degree in Statistics</p>
+                        <div class="project-buttons">
+                            <a href="CERTIFICATE DEAN LIST AWARD SEMESTER 3.pdf" download class="btn btn-secondary">
+                                <i class="fas fa-file-arrow-down"></i> PDF
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="assets/images/Dekan Sem 4 image.jpeg" alt="DataCamp Preview">
+                    <div class="project-card-content">
+                        <h3>📊 Dean’s List — Semester 4, Degree in Statistics</h3>
+                        <p>Recognized on the Dean’s List for excellent academic performance in Semester 4 of the Bachelor’s Degree in Statistics</p>
+                        <div class="project-buttons">
+                            <a href="CERTIFICATE DEAN LIST AWARD SEMESTER 4.pdf" download class="btn btn-secondary">
+                                <i class="fas fa-file-arrow-down"></i> PDF
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Hanna Sofea Mohd Zaid. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        const revealElements = document.querySelectorAll('.reveal');
+        function revealOnScroll() {
+            revealElements.forEach(el => {
+                const windowHeight = window.innerHeight;
+                const elementTop = el.getBoundingClientRect().top;
+                if (elementTop < windowHeight - 120) {
+                    el.classList.add('active');
+                }
+            });
+        }
+        window.addEventListener('scroll', revealOnScroll);
+        revealOnScroll();
+    </script>
+</body>
+</html>
